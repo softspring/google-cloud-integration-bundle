@@ -5,7 +5,7 @@
 [![License](https://poser.pugx.org/softspring/google-cloud-integration-bundle/license.svg)](https://packagist.org/packages/softspring/google-cloud-integration-bundle)
 [![PHP Version Require](http://poser.pugx.org/softspring/google-cloud-integration-bundle/require/php)](https://packagist.org/packages/softspring/google-cloud-integration-bundle)
 [![Total Downloads](https://poser.pugx.org/softspring/google-cloud-integration-bundle/downloads)](https://packagist.org/packages/softspring/google-cloud-integration-bundle)
-[![Build status](https://github.com/softspring/google-cloud-integration-bundle/actions/workflows/php.yml/badge.svg?branch=5.0)](https://github.com/softspring/google-cloud-integration-bundle/actions/workflows/php.yml)
+[![Build status](https://github.com/softspring/google-cloud-integration-bundle/actions/workflows/php.yml/badge.svg?branch=5.1)](https://github.com/softspring/google-cloud-integration-bundle/actions/workflows/php.yml)
 
 The bundle integrates Google Cloud with Symfony projects.
 
