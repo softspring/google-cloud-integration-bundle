@@ -35,3 +35,7 @@ when@prod:
                 process_psr_3_messages: false
                 channels: ["!event", "!doctrine"]
 ```
+
+## Google Cloud permissions
+
+Important: you require an active Service account with **Logs Writer** permission.
