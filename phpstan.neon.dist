@@ -1,0 +1,9 @@
+parameters:
+    level: 5
+    paths:
+        - src/
+        - scripts/
+    bootstrapFiles:
+        - vendor/autoload.php
+    ignoreErrors:
+        - '#^Function opencensus_trace_method not found.#'

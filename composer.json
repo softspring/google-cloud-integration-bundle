@@ -6,21 +6,35 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.0"
+        "php": ">=8.0",
+        "google/cloud-error-reporting": "^0.19",
+        "google/cloud-logging": "^1.24"
     },
     "require-dev": {
+        "doctrine/dbal": "^3.6",
         "friendsofphp/php-cs-fixer": "^3.14",
+        "opencensus/opencensus-exporter-stackdriver": "^0.1.0",
         "phpstan/phpstan": "^1.9",
-        "phpunit/phpunit": "^9.5"
+        "symfony/config": "^5.4|^6.0",
+        "symfony/dependency-injection": "^5.4|^6.0",
+        "symfony/http-kernel": "^5.4|^6.0",
+        "twig/twig": "^3.5"
+    },
+    "suggest": {
+        "opencensus/opencensus-exporter-stackdriver": "Integrate with Google Cloud Trace and opencensus"
     },
     "autoload": {
+        "files": [
+            "scripts/error_reporting.php",
+            "scripts/trace.php"
+        ],
         "psr-4": {
-            "Softspring\\GoogleCloudIntegrationBundle\\": "src/"
+            "Softspring\\Component\\GoogleCloudIntegrationBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Softspring\\GoogleCloudIntegrationBundle\\Tests\\": "tests/"
+            "Softspring\\Component\\GoogleCloudIntegrationBundle\\Tests\\": "tests/"
         }
     },
     "config": {
