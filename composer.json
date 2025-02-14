@@ -2,7 +2,7 @@
     "name": "softspring/google-cloud-integration-bundle",
     "description": "This bundle provides Google Cloud integrations for Symfony.",
     "type": "symfony-bundle",
-    "license": "AGPL-3.0",
+    "license": "AGPL-3.0-or-later",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
