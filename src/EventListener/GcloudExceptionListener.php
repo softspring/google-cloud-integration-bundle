@@ -4,6 +4,7 @@ namespace Softspring\Component\GoogleCloudIntegrationBundle\EventListener;
 
 use Google\Cloud\ErrorReporting\Bootstrap;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
@@ -18,7 +19,7 @@ class GcloudExceptionListener implements EventSubscriberInterface
 
     public function logException(ExceptionEvent $event): void
     {
-        $statusCode = $event->getResponse() ? $event->getResponse()->getStatusCode() : 0;
+        $statusCode = $event->getResponse() instanceof Response ? $event->getResponse()->getStatusCode() : 0;
         if (400 <= $statusCode && $statusCode <= 499) {
             // do not track client common errors
             return;
