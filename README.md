@@ -1,4 +1,4 @@
-# Google Cloud integration bundle
+# Google Cloud Integration Bundle
 
 ![Latest Stable](https://img.shields.io/packagist/v/softspring/google-cloud-integration-bundle?label=stable&style=flat-square)
 ![Latest Unstable](https://img.shields.io/packagist/v/softspring/google-cloud-integration-bundle?label=unstable&style=flat-square&include_prereleases)
@@ -7,14 +7,27 @@
 ![Downloads](https://img.shields.io/packagist/dt/softspring/google-cloud-integration-bundle?style=flat-square)
 [![CI](https://img.shields.io/github/actions/workflow/status/softspring/google-cloud-integration-bundle/ci.yml?branch=6.0&style=flat-square&label=CI)](https://github.com/softspring/google-cloud-integration-bundle/actions/workflows/ci.yml)
 
-The bundle integrates Google Cloud with Symfony projects.
+This bundle provides Google Cloud integrations for Symfony.
+
+## Armonic
+
+This package is part of [Armonic](https://softspring.es/en/armonic).
 
 ## Documentation
 
-* [1. Installation](docs/1_installation.md)
-* [2. Logging](docs/2_logging.md)
-* [3. Error reporting](docs/3_error_reporting.md)
-* [4. Trace](docs/4_trace.md)
+[Armonic Documentation](https://armonic.softspring.es/latest/components/google-cloud-integration)
+
+## Contributing
+
+Use the standard package commands before sending changes:
+
+```bash
+composer fix
+composer test
+composer test-bc
+```
+
+[Report issues](https://github.com/softspring/google-cloud-integration-bundle/issues) and [send Pull Requests](https://github.com/softspring/google-cloud-integration-bundle/pulls)
 
 ## License
 
