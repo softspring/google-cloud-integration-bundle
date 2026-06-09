@@ -5,5 +5,3 @@ parameters:
         - scripts/
     bootstrapFiles:
         - vendor/autoload.php
-    ignoreErrors:
-        - '#^Function opencensus_trace_method not found.#'

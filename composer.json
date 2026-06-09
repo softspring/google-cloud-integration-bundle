@@ -12,7 +12,6 @@
         "doctrine/dbal": "^2.10 || ^3.0 || ^4.0",
         "ergebnis/composer-normalize": "^2.50",
         "friendsofphp/php-cs-fixer": "^3.94",
-        "opencensus/opencensus-exporter-stackdriver": "^0.1.0",
         "phpstan/phpstan": "^2.1",
         "rector/rector": "^2.3",
         "symfony/config": "^6.4 || ^7.4 || ^8.0",
@@ -21,7 +20,7 @@
         "twig/twig": "^3.4"
     },
     "suggest": {
-        "opencensus/opencensus-exporter-stackdriver": "Integrate with Google Cloud Trace and opencensus"
+        "softspring/google-cloud-trace-bundle": "Integrate Symfony applications with Google Cloud Trace."
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -30,8 +29,7 @@
             "Softspring\\Component\\GoogleCloudIntegrationBundle\\": "src/"
         },
         "files": [
-            "scripts/error_reporting.php",
-            "scripts/trace.php"
+            "scripts/error_reporting.php"
         ]
     },
     "autoload-dev": {
