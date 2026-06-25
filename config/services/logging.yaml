@@ -1,0 +1,20 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Softspring\Component\GoogleCloudIntegrationBundle\Logging\CloudLoggingProcessor:
+        arguments:
+            $gcloudProject: '%env(default::GCLOUD_PROJECT)%'
+        tags:
+            - { name: monolog.processor }
+
+    Softspring\Component\GoogleCloudIntegrationBundle\Logging\GoogleCloudLoggingHandler:
+        class: Monolog\Handler\PsrHandler
+        arguments:
+            - '@Google\Cloud\Logging\PsrLogger'
+
+    Google\Cloud\Logging\PsrLogger:
+        factory: [ 'Google\Cloud\Logging\LoggingClient', 'psrBatchLogger' ]
+        arguments: [ 'app', [ ] ]

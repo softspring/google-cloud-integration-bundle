@@ -15,6 +15,8 @@ class SfsGoogleCloudIntegrationExtension extends Extension
     {
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../../config/services'));
 
+        $loader->load('logging.yaml');
+
         if (1 === (int) getenv('GCLOUD_ERROR_REPORTING')) {
             $loader->load('event_listener.yaml');
         }
