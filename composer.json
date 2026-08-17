@@ -5,7 +5,7 @@
     "type": "symfony-bundle",
     "require": {
         "php": ">=8.4",
-        "google/cloud-error-reporting": "^0.22",
+        "google/cloud-error-reporting": "^0.27",
         "google/cloud-logging": "^1.24",
         "monolog/monolog": "^3.0",
         "symfony/config": "^6.4 || ^7.4 || ^8.0",
