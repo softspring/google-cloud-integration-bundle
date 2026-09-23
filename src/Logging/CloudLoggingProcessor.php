@@ -20,7 +20,7 @@ final readonly class CloudLoggingProcessor
     {
         $request = $this->requestStack->getMainRequest();
 
-        if (!$request || '' === $this->gcloudProject) {
+        if (!$request instanceof Request || '' === $this->gcloudProject) {
             return $record;
         }
 
