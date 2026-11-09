@@ -10,6 +10,9 @@
 
 This bundle provides Google Cloud integrations for Symfony.
 
+The logging processor adds Google Cloud request and trace metadata when `GCLOUD_PROJECT` is configured.
+When the variable is unset or empty, it leaves log records unchanged so local applications can boot without a Cloud project.
+
 ## Armonic
 
 This package is part of [Armonic](https://softspring.es/en/armonic).
