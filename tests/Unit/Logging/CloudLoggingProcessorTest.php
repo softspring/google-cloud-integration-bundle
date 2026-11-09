@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Softspring\Component\GoogleCloudIntegrationBundle\Tests\Logging;
+namespace Softspring\Component\GoogleCloudIntegrationBundle\Tests\Unit\Logging;
 
 use DateTimeImmutable;
 use Monolog\Level;
