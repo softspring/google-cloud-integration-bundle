@@ -5,8 +5,8 @@
 ![License](https://img.shields.io/packagist/l/softspring/google-cloud-integration-bundle?style=flat-square)
 ![PHP Version](https://img.shields.io/packagist/dependency-v/softspring/google-cloud-integration-bundle/php?style=flat-square)
 ![Downloads](https://img.shields.io/packagist/dt/softspring/google-cloud-integration-bundle?style=flat-square)
-[![CI](https://img.shields.io/github/actions/workflow/status/softspring/google-cloud-integration-bundle/ci.yml?branch=6.0&style=flat-square&label=CI)](https://github.com/softspring/google-cloud-integration-bundle/actions/workflows/ci.yml)
-[![Coverage](https://img.shields.io/codecov/c/github/softspring/google-cloud-integration-bundle?branch=6.0&style=flat-square)](https://app.codecov.io/gh/softspring/google-cloud-integration-bundle/tree/6.0)
+[![CI](https://img.shields.io/github/actions/workflow/status/softspring/google-cloud-integration-bundle/ci.yml?branch=6.1&style=flat-square&label=CI)](https://github.com/softspring/google-cloud-integration-bundle/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/codecov/c/github/softspring/google-cloud-integration-bundle?branch=6.1&style=flat-square)](https://app.codecov.io/gh/softspring/google-cloud-integration-bundle/tree/6.1)
 
 This bundle provides Google Cloud integrations for Symfony.
 
@@ -16,7 +16,7 @@ This package is part of [Armonic](https://softspring.es/en/armonic).
 
 ## Documentation
 
-[Armonic Documentation](https://armonic.softspring.es/6.0/components/google-cloud-integration)
+[Armonic Documentation](https://armonic.softspring.es/6.1@dev/components/google-cloud-integration)
 
 ## Contributing
 
