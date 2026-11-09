@@ -6,7 +6,7 @@
     "require": {
         "php": ">=8.4",
         "google/cloud-error-reporting": "^0.27",
-        "google/cloud-logging": "^1.24",
+        "google/cloud-logging": "^2.3",
         "monolog/monolog": "^3.0",
         "symfony/config": "^6.4 || ^7.4 || ^8.0",
         "symfony/dependency-injection": "^6.4 || ^7.4 || ^8.0",
