@@ -12,7 +12,7 @@ final readonly class CloudLoggingProcessor
 {
     public function __construct(
         private RequestStack $requestStack,
-        private string $gcloudProject,
+        private ?string $gcloudProject,
     ) {
     }
 
@@ -20,7 +20,7 @@ final readonly class CloudLoggingProcessor
     {
         $request = $this->requestStack->getMainRequest();
 
-        if (!$request instanceof Request || '' === $this->gcloudProject) {
+        if (!$request instanceof Request || null === $this->gcloudProject || '' === $this->gcloudProject) {
             return $record;
         }
 

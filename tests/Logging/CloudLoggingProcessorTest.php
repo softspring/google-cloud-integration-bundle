@@ -7,6 +7,7 @@ namespace Softspring\Component\GoogleCloudIntegrationBundle\Tests\Logging;
 use DateTimeImmutable;
 use Monolog\Level;
 use Monolog\LogRecord;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Softspring\Component\GoogleCloudIntegrationBundle\Logging\CloudLoggingProcessor;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,6 +15,34 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 class CloudLoggingProcessorTest extends TestCase
 {
+    /**
+     * @return iterable<string, array{?string}>
+     */
+    public static function missingProjectIds(): iterable
+    {
+        yield 'unset project' => [null];
+        yield 'empty project' => [''];
+    }
+
+    #[DataProvider('missingProjectIds')]
+    public function testPreservesTheRecordWhenNoProjectIsConfigured(?string $project): void
+    {
+        $requestStack = new RequestStack();
+        $requestStack->push(Request::create('https://example.test/', server: [
+            'HTTP_X_CLOUD_TRACE_CONTEXT' => '105445aa7843bc8bf206b12000100000/123;o=1',
+        ]));
+        $record = new LogRecord(
+            datetime: new DateTimeImmutable(),
+            channel: 'app',
+            level: Level::Info,
+            message: 'Local request',
+            context: ['existing' => 'context'],
+        );
+        $processor = new CloudLoggingProcessor($requestStack, $project);
+
+        self::assertSame($record, $processor($record));
+    }
+
     public function testAddsGoogleCloudTraceOptionsFromRequestHeader(): void
     {
         $request = Request::create(
